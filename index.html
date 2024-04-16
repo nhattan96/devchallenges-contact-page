@@ -1,16 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Page</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <main>
-    <article>
-
-    </article>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <img src="./assets/contact-form-icon.svg" alt="" />
+        <h1>Interested in our business pricing?</h1>
+        <p>
+          Fill out the form to view details and we’ll contact you as soon as
+          possible.
+        </p>
+        <section>
+          <div class="field-container">
+            <div class="field text-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Ethan Johnson" />
+            </div>
+            <div class="field text-field">
+              <label for="email">Company Email</label>
+              <input id="email" type="text" placeholder="ethan@johnson.com" />
+            </div>
+            <div class="field dropdown-field">
+              <label for="company-size">Company Size</label>
+              <div id="company-size">
+                <p>50-100 employees</p>
+                <img src="./assets/Expand_down.svg" alt="" />
+              </div>
+            </div>
+            <div class="field dropdown-field">
+              <label for="subject">Company Size</label>
+              <div id="subject">
+                <p>Building Landing pages</p>
+                <img src="./assets/Expand_down.svg" alt="" />
+              </div>
+            </div>
+            <div class="field dropdown-field">
+              <label for="message">Name</label>
+              <textarea id="message" cols="30" rows="10">
+50-100 employees</textarea
+              >
+            </div>
+            <button>Contact Sales</button>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
 </html>

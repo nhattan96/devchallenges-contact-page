@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Init */
+:root {
+  /* Font */
+  --main-font: "Be Vietnam Pro", sans-serif;
+
+  --heading-font-size: 32px;
+  --heading-font-size-mb: 46px;
+  --body-font-size: 16px;
+  --body-font-size-mb: 19px;
+  --label-font-size: 14px;
+
+  --input-font-size-mb: 16px;
+  --placeholder-font-size-mb: 16px;
+
+  /* Color */
+  --main-bg-color: #fafaf9;
+
+  --form-bg-color: #cdd5e038;
+  --main-text-color: #ffffff;
+  --field-bg-color: #f8fafc;
+  --placeholder-text-color: #cdd5e0;
+  --input-text-color: #111729;
+  --button-text-color: #4036A9;
+
+  /* Border */
+  --card-border-radius: 20px;
+  --card-input-radius: 15px;
+
+  /* Image */
+  --main-bg-image: url("./assets/bg-image.svg");
+}
+
+/* Set default */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: inline;
+}
+
+label,
+input,
+textarea,
+button,
+.field p {
+  font-family: var(--main-font);
+  font-size: var(--input-font-size-mb);
+  font-weight: 700;
+}
+
+input,
+textarea,
+button,
+.dropdown-field > div {
+  border-radius: var(--card-input-radius);
+  background: var(--field-bg-color);
+
+  border: solid 1px transparent;
+}
+
+input {
+  color: var(--input-text-color);
+}
+
+input::placeholder {
+  color: var(--placeholder-text-color);
+
+  opacity: 1;
+  font-weight: 500;
+  font-size: var(--placeholder-font-size-mb);
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-text-color);
+
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+main {
+  background-image: var(--main-bg-image);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px;
+}
+
+article > img {
+  width: 100px;
+  margin-right: auto;
+}
+
+article > h1 {
+  font-size: var(--heading-font-size-mb);
+
+  padding: 60px 90px 25px 90px;
+  text-align: center;
+}
+
+article > p {
+  font-size: var(--body-font-size-mb);
+
+  padding: 0 100px 80px 100px;
+  text-align: center;
+}
+
+article > section {
+  background: var(--form-bg-color);
+  border-radius: var(--card-border-radius);
+
+  border: solid 1px transparent;
+  width: 100%;
+}
+
+.field-container {
+  margin: 35px;
+}
+
+.field-container > .field {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 24px;
+}
+
+.field-container > button {
+  width: 100%;
+}
+
+.field-container > .field > label {
+  font-size: var(--label-font-size);
+
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.field-container > .field > input {
+  padding: 24px 18px 24px 18px;
+
+  font-size: 19.8px;
+}
+
+.field-container > .field > textarea {
+  padding: 24px 18px 24px 18px;
+}
+
+.field-container > .dropdown-field {
+  position: relative;
+}
+
+.field-container > .dropdown-field > div {
+  padding: 24px 18px 24px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field-container > .dropdown-field > div > p {
+  color: var(--input-text-color);
+}
+
+.field-container > .dropdown-field > div > img {
+  width: 25px;
+}
+
+.field-container > button {
+  margin-top: 25px;
+  border-radius: var(--card-input-radius);
+  padding: 23.75px 18px 23.75px 18px;
+  background: var(--field-bg-color);
+  color: var(--button-text-color);
+  font-size: 20px;
+}
