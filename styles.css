@@ -5,14 +5,12 @@
   /* Font */
   --main-font: "Be Vietnam Pro", sans-serif;
 
-  --heading-font-size: 32px;
-  --heading-font-size-mb: 46px;
-  --body-font-size: 16px;
-  --body-font-size-mb: 19px;
+  --heading-font-size: 63px;
+  --body-font-size: 32px;
   --label-font-size: 14px;
 
-  --input-font-size-mb: 16px;
-  --placeholder-font-size-mb: 16px;
+  --input-font-size: 16px;
+  --placeholder-font-size: 16px;
 
   /* Color */
   --main-bg-color: #fafaf9;
@@ -22,7 +20,7 @@
   --field-bg-color: #f8fafc;
   --placeholder-text-color: #cdd5e0;
   --input-text-color: #111729;
-  --button-text-color: #4036A9;
+  --button-text-color: #4036a9;
 
   /* Border */
   --card-border-radius: 20px;
@@ -56,7 +54,7 @@ textarea,
 button,
 .field p {
   font-family: var(--main-font);
-  font-size: var(--input-font-size-mb);
+  font-size: var(--input-font-size);
   font-weight: 700;
 }
 
@@ -94,37 +92,45 @@ textarea {
   resize: none;
 }
 
-main {
+/* Main */
+body {
   background-image: var(--main-bg-image);
+  background-size: cover;
 }
 
+.logo {
+  width: 100px;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+
+/* Article */
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 25px;
-}
-
-article > img {
-  width: 100px;
-  margin-right: auto;
+  padding: 0 25px 25px 25px;
 }
 
 article > h1 {
-  font-size: var(--heading-font-size-mb);
+  font-size: var(--heading-font-size);
 
-  padding: 60px 90px 25px 90px;
+  max-width: 600px;
   text-align: center;
+  margin-top: 44px;
+  margin-bottom: 16px;
 }
 
 article > p {
-  font-size: var(--body-font-size-mb);
+  font-size: var(--body-font-size);
 
-  padding: 0 100px 80px 100px;
+  margin-bottom: 72px;
+  max-width: 650px;
   text-align: center;
 }
 
+/* Section */
 article > section {
   background: var(--form-bg-color);
   border-radius: var(--card-border-radius);
@@ -133,8 +139,9 @@ article > section {
   width: 100%;
 }
 
+/* Field */
 .field-container {
-  margin: 35px;
+  margin: 32px;
 }
 
 .field-container > .field {
@@ -185,10 +192,58 @@ article > section {
 }
 
 .field-container > button {
-  margin-top: 25px;
   border-radius: var(--card-input-radius);
-  padding: 23.75px 18px 23.75px 18px;
   background: var(--field-bg-color);
   color: var(--button-text-color);
+
+  margin-top: 25px;
+  padding: 23.75px 18px 23.75px 18px;
   font-size: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    margin-left: 25px;
+  }
+
+  .field-container-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 18px;
+  }
+
+  .field-haft {
+    flex: 1;
+  }
+
+  .field-full {
+    flex-basis: 100%;
+  }
+
+  .field-break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  article > h1 {
+    font-size: var(--heading-font-size);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo {
+    margin-left: 50px;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
+
+  article {
+    max-width: 747px;
+    padding: 0;
+  }
+  
 }
