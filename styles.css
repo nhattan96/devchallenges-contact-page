@@ -176,18 +176,38 @@ article > section {
   position: relative;
 }
 
-.field-container > .dropdown-field > div {
+.dropdown-field:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content{
+  display: none;
+    position: absolute !important;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content > a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.field-container > .dropdown-field > button {
   padding: 24px 18px 24px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.field-container > .dropdown-field > div > p {
+.field-container > .dropdown-field > button > p {
   color: var(--input-text-color);
 }
 
-.field-container > .dropdown-field > div > img {
+.field-container > .dropdown-field > button > img {
   width: 25px;
 }
 
